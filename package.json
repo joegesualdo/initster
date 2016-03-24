@@ -1,6 +1,6 @@
 {
   "name": "initster",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,9 @@
   "keywords": [],
   "author": {
     "name": ""
+  },
+  "bin": {
+    "initster": "cli.js"
   },
   "license": "MIT",
   "devDependencies": {

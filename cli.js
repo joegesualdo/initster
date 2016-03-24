@@ -2,7 +2,7 @@ var fs = require("fs")
 var Promise = require('bluebird');
 const readline = require('readline');
 
-var projectName = __dirname.split("/").pop()
+var projectName = process.cwd().split("/").pop()
 
 var questions = [
   {
