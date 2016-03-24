@@ -1,0 +1,20 @@
+{
+  "name": "initster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": "",
+  "keywords": [],
+  "author": {
+    "name": ""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  },
+  "dependencies": {}
+}
