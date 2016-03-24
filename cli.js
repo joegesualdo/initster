@@ -1,6 +1,7 @@
-var fs = require("fs")
+var fs = require("fs");
 var Promise = require('bluebird');
 const readline = require('readline');
+var jsonfile = require('jsonfile')
 
 var projectName = process.cwd().split("/").pop()
 
@@ -224,7 +225,6 @@ function createReadme(package) {
   });
 }
 
-var jsonfile = require('jsonfile')
 
 askQuestions(questions).then(function(package){
   var file = process.cwd() + '/package.json'

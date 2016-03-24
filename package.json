@@ -19,5 +19,8 @@
     "mocha": "*",
     "chai": "*"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "jsonfile": "^2.2.3"
+  }
 }
