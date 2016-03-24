@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var fs = require("fs");
 var Promise = require('bluebird');
 const readline = require('readline');
