@@ -1,16 +1,16 @@
 #!/usr/bin/env node
-
 var fs = require("fs");
 var Promise = require('bluebird');
 const readline = require('readline');
 var jsonfile = require('jsonfile')
+
 var promiseChain = require("./promise-chain")
 var mergeOptions = require("./merge-options")
-
 var questions = require("./questions")
-
-var createTravisFile = require("./create-travis-file")
+var createTravisFile = require("./create-travis-file");
 var createReadme = require("./create-readme")
+var generateMochaTestFile = require('./create-mocha-test-file');
+var createIndexFile = require('./create-index-file');
 
 function askQuestion(question, startingPackage) {
   return new Promise(function(resolve, reject){
@@ -27,7 +27,7 @@ function askQuestion(question, startingPackage) {
 }
 
 // startingPackage is the object you want to add the package
-//   key values to
+//   key/values pairs to.
 function askQuestions(questions, startingPackage) {
   startingPackage = startingPackage || {}
   return new Promise(function(resolve, reject){
@@ -38,37 +38,6 @@ function askQuestions(questions, startingPackage) {
       resolve(mergeOptions(startingPackage, package))
     })
   })
-}
-
-
-
-function generateMochaTestFileString(package) {
-  return `var expect = require("chai").expect
-var ${package.name} = require("./index")
-
-describe("Sample", function(){
-  it("sample", function(){
-    expect(true).to.equal(false)
-  })
-})
-`
-}
-
-
-
-function generateIndexFileString() {
-  return `"use strict";`
-}
-
-function generateMochaTestFile(package) {
-  fs.writeFile(process.cwd() + '/test.js', generateMochaTestFileString(package), (err) => {
-    if (err) throw err;
-  });
-}
-function createIndexFile() {
-  fs.writeFile(process.cwd() + '/index.js', generateIndexFileString(), (err) => {
-    if (err) throw err;
-  });
 }
 
 askQuestions(questions).then(function(package){
