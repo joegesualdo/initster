@@ -11,6 +11,7 @@ var createTravisFile = require("./create-travis-file");
 var createReadme = require("./create-readme")
 var generateMochaTestFile = require('./create-mocha-test-file');
 var createIndexFile = require('./create-index-file');
+var createGitignoreFile = require('./create-gitignore-file');
 
 function askQuestion(question, startingPackage) {
   return new Promise(function(resolve, reject){
@@ -50,6 +51,7 @@ askQuestions(questions).then(function(package){
   createReadme(package)
   createTravisFile()
   createIndexFile()
+  createGitignoreFile()
   generateMochaTestFile(package)
 })
 
