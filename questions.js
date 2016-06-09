@@ -32,7 +32,9 @@ module.exports =  [
   {
     prompt: "Test Command:",
     onEnter: function(answer, package) {
-      package['scripts'] = {test: answer || "mocha test.js"}
+      package['scripts'] = {
+        test: answer || "mocha test.js"
+      }
       return package;
     }
   },
@@ -75,6 +77,7 @@ module.exports =  [
       })
       package.devDependencies["mocha"] = "*"
       package.devDependencies["chai"] = "*"
+      package.devDependencies["distify-cli"] = "0.0.2"
       return package;
     }
   },
