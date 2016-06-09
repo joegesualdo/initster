@@ -42,7 +42,7 @@ function askQuestions(questions, startingPackage) {
 }
 
 askQuestions(questions).then(function(package){
-  package['scripts']["build"] = "./node_modules/distify-cli/cli.js --input-file=./src/index.js --output-dir=./dist"
+  package['scripts']["build"] = "./node_modules/distify-cli/cli.js --input-file=./index.js --output-dir=./dist"
   var file = process.cwd() + '/package.json'
 
   jsonfile.writeFile(file, package, {spaces: 2}, function(err) {
