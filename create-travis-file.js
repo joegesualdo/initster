@@ -2,10 +2,7 @@ var fs = require("fs");
 function generateTravisString() {
   return `language: node_js
 node_js:
-  - '5'
-  - '4'
-  - '0.12'
-  - '0.10'
+  - '6.2.1'
 `
 }
 

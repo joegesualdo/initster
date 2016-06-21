@@ -1,4 +1,5 @@
 var fs = require("fs");
+var convertToCamelcase = require('convert-to-camelcase').default
 
 function generateReadmeString(package) {
   return `## ${package.name} [![Build Status](https://travis-ci.org/${package.repository}.svg?branch=master)](https://travis-ci.org/${package.repository})
@@ -11,7 +12,7 @@ $ npm install --save ${package.name}
 
 ## Usage
 \`\`\`javascript
-var ${package.name} = require("${package.name}")
+var ${convertToCamelcase(package.name)} = require("${package.name}").default
 
 // insert code example here
 \`\`\`
@@ -33,7 +34,7 @@ $ npm test
 Returns: \`Array\`, of things
 
 \`\`\`javascript
-var ${package.name} = require("${package.name}")
+var ${convertToCamelcase(package.name)} = require("${package.name}").default
 
 // insert method example here
 \`\`\`

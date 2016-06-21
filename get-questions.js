@@ -1,4 +1,4 @@
-function getQuestions(projectName) {
+function getQuestions(repoName, projectName) {
   return [
     {
       prompt: "Name: (" + projectName + ")",
@@ -22,25 +22,25 @@ function getQuestions(projectName) {
       }
     },
     {
-      prompt: "Entry Point: (index.js)",
+      prompt: "Entry Point: (./dist/index.js)",
       onEnter: function(answer, package) {
-        package.main = answer || "index.js";
+        package.main = answer || "./dist/index.js";
         return package;
       }
     },
     {
-      prompt: "Test Command:",
+      prompt: "Test Command: ($ ava test.js)",
       onEnter: function(answer, package) {
         package['scripts'] = {
-          test: answer || "mocha test.js"
+          test: answer || "./node_modules/ava/cli.js -v test.js"
         }
         return package;
       }
     },
     {
-      prompt: "Git Repository:",
+      prompt: `Github Repository name: (${repoName}/<REPO_NAME>)`,
       onEnter: function(answer, package) {
-        package.repository = answer;
+        package.repository = `${repoName}/${answer}`;
         return package;
       }
     },
@@ -74,9 +74,8 @@ function getQuestions(projectName) {
         answer.split(",").filter(function(e){return e}).forEach(function(dep){
           package.devDependencies[dep] = "*"
         })
-        package.devDependencies["mocha"] = "*"
-        package.devDependencies["chai"] = "*"
-        package.devDependencies["distify-cli"] = "0.0.2"
+        package.devDependencies["ava"] = "^0.15.2"
+        package.devDependencies["distify-cli"] = "0.0.5"
         return package;
       }
     },
