@@ -14,22 +14,22 @@
 7 silly cache add   rawSpec: '.',
 7 silly cache add   spec: '/Users/jgesualdo/code/node/modules/initster',
 7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /Users/jgesualdo/.npm/initster/0.0.4/package.tgz not in flight; packing
+8 verbose addLocalDirectory /Users/jgesualdo/.npm/initster/0.0.5/package.tgz not in flight; packing
 9 verbose correctMkdir /Users/jgesualdo/.npm correctMkdir not in flight; initializing
-10 info lifecycle initster@0.0.4~prepublish: initster@0.0.4
-11 silly lifecycle initster@0.0.4~prepublish: no script for prepublish, continuing
-12 verbose tar pack [ '/Users/jgesualdo/.npm/initster/0.0.4/package.tgz',
+10 info lifecycle initster@0.0.5~prepublish: initster@0.0.5
+11 silly lifecycle initster@0.0.5~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/jgesualdo/.npm/initster/0.0.5/package.tgz',
 12 verbose tar pack   '/Users/jgesualdo/code/node/modules/initster' ]
-13 verbose tarball /Users/jgesualdo/.npm/initster/0.0.4/package.tgz
+13 verbose tarball /Users/jgesualdo/.npm/initster/0.0.5/package.tgz
 14 verbose folder /Users/jgesualdo/code/node/modules/initster
-15 verbose addLocalTarball adding from inside cache /Users/jgesualdo/.npm/initster/0.0.4/package.tgz
+15 verbose addLocalTarball adding from inside cache /Users/jgesualdo/.npm/initster/0.0.5/package.tgz
 16 verbose correctMkdir /Users/jgesualdo/.npm correctMkdir not in flight; initializing
-17 silly cache afterAdd initster@0.0.4
-18 verbose afterAdd /Users/jgesualdo/.npm/initster/0.0.4/package/package.json not in flight; writing
+17 silly cache afterAdd initster@0.0.5
+18 verbose afterAdd /Users/jgesualdo/.npm/initster/0.0.5/package/package.json not in flight; writing
 19 verbose correctMkdir /Users/jgesualdo/.npm correctMkdir not in flight; initializing
-20 verbose afterAdd /Users/jgesualdo/.npm/initster/0.0.4/package/package.json written
+20 verbose afterAdd /Users/jgesualdo/.npm/initster/0.0.5/package/package.json written
 21 silly publish { name: 'initster',
-21 silly publish   version: '0.0.4',
+21 silly publish   version: '0.0.5',
 21 silly publish   description: '> Deprecated in favor of [`npm-better-init`](https://github.com/joegesualdo/npm-better-init)',
 21 silly publish   main: 'index.js',
 21 silly publish   scripts:
@@ -50,9 +50,9 @@
 21 silly publish      'parse-argv': '0.0.2' },
 21 silly publish   readme: '## WARNING: Deprecated as of June 21, 2016\n> Deprecated in favor of [`npm-better-init`](https://github.com/joegesualdo/npm-better-init)\n',
 21 silly publish   readmeFilename: 'readme.md',
-21 silly publish   gitHead: 'a98bec3dd2a0a04561917f83c23117150d259c49',
-21 silly publish   _id: 'initster@0.0.4',
-21 silly publish   _shasum: 'eb7c82353011c3898078b27d8068aae1ee3b9a69',
+21 silly publish   gitHead: '10fcbe49b9087ed5a86b66fb73bd6ad22d2ed678',
+21 silly publish   _id: 'initster@0.0.5',
+21 silly publish   _shasum: '57e11b20c991243af43d1370e1a2e952cb569765',
 21 silly publish   _from: '.' }
 22 verbose getPublishConfig undefined
 23 silly mapToRegistry name initster
@@ -67,29 +67,29 @@
 26 silly mapToRegistry   type: 'tag' }
 27 silly mapToRegistry uri https://registry.npmjs.org/initster
 28 verbose publish registryBase https://registry.npmjs.org/
-29 silly publish uploading /Users/jgesualdo/.npm/initster/0.0.4/package.tgz
+29 silly publish uploading /Users/jgesualdo/.npm/initster/0.0.5/package.tgz
 30 verbose request uri https://registry.npmjs.org/initster
 31 verbose request sending authorization for write operation
-32 info attempt registry request try #1 at 6:16:44 PM
+32 info attempt registry request try #1 at 6:17:17 PM
 33 verbose request using bearer token for auth
-34 verbose request id 59d595d47fb1cc30
+34 verbose request id bd28e0bd19af9f52
 35 http request PUT https://registry.npmjs.org/initster
 36 http 403 https://registry.npmjs.org/initster
 37 verbose headers { 'content-type': 'application/json',
 37 verbose headers   'cache-control': 'max-age=300',
 37 verbose headers   'content-length': '95',
 37 verbose headers   'accept-ranges': 'bytes',
-37 verbose headers   date: 'Tue, 21 Jun 2016 22:16:44 GMT',
+37 verbose headers   date: 'Tue, 21 Jun 2016 22:17:18 GMT',
 37 verbose headers   via: '1.1 varnish',
 37 verbose headers   connection: 'keep-alive',
-37 verbose headers   'x-served-by': 'cache-iad2121-IAD',
+37 verbose headers   'x-served-by': 'cache-iad2127-IAD',
 37 verbose headers   'x-cache': 'MISS',
 37 verbose headers   'x-cache-hits': '0',
-37 verbose headers   'x-timer': 'S1466547404.164623,VS0,VE782',
+37 verbose headers   'x-timer': 'S1466547437.898399,VS0,VE681',
 37 verbose headers   vary: 'Accept-Encoding' }
 38 verbose request invalidating /Users/jgesualdo/.npm/registry.npmjs.org/initster on PUT
 39 error publish Failed PUT 403
-40 verbose stack Error: "You cannot publish over the previously published version 0.0.4." : initster
+40 verbose stack Error: "You cannot publish over the previously published version 0.0.5." : initster
 40 verbose stack     at makeError (/Users/jgesualdo/.npm-packages/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
 40 verbose stack     at CachingRegistryClient.<anonymous> (/Users/jgesualdo/.npm-packages/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
 40 verbose stack     at Request._callback (/Users/jgesualdo/.npm-packages/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
@@ -108,7 +108,7 @@
 46 error node v6.2.1
 47 error npm  v3.9.6
 48 error code E403
-49 error "You cannot publish over the previously published version 0.0.4." : initster
+49 error "You cannot publish over the previously published version 0.0.5." : initster
 50 error If you need help, you may report this error at:
 50 error     <https://github.com/npm/npm/issues>
 51 verbose exit [ 1, true ]
